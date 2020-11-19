@@ -16,14 +16,14 @@ def get_args():
         description='Picnic game',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('item',  #the positional parameter name
+    parser.add_argument('item',  # the positional parameter name
                         metavar='str',
-                        nargs='+', # number of arguments where + means one or moer
+                        nargs='+',  # number of arguments where + means one or moer
                         help='Item(s) to bring')
 
     parser.add_argument('-s',  # short flag name
                         '--sorted',  # long flag name
-                        action='store_true', # if the flag is present, store a True val, default False
+                        action='store_true',  # if the flag is present, store a True val, default False
                         help='Sort the items'
                         )
 
@@ -39,13 +39,12 @@ def main():
     sorted = args.sorted
     mid_items = ''
 
-    if sorted: # checks if the sorted flag was used; didn't really need the var but it works
+    if sorted:  # checks if the sorted flag was used; didn't really need the var but it works
         items.sort()
-
 
     if len(items) == 1:
         print(f'You are bringing {items[0]}.')
-    elif len(items) ==2:
+    elif len(items) == 2:
         print(f'You are bringing {items[0]} and {items[1]}.')
     elif len(items) > 2:
         mid_items = ', '.join(items[1:-1])
