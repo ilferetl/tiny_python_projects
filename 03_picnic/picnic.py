@@ -12,6 +12,7 @@ import argparse
 def get_args():
     """Get command-line arguments"""
 
+    # noinspection PyTypeChecker
     parser = argparse.ArgumentParser(
         description='Picnic game',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -36,10 +37,9 @@ def main():
 
     args = get_args()
     items = args.item
-    sorted = args.sorted
-    mid_items = ''
+    sorted_flag = args.sorted
 
-    if sorted:  # checks if the sorted flag was used; didn't really need the var but it works
+    if sorted_flag:  # checks if the sorted flag was used; didn't really need the var but it works
         items.sort()
 
     if len(items) == 1:
