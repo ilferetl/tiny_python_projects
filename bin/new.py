@@ -27,6 +27,7 @@ class Args(NamedTuple):
 def get_args() -> Args:
     """Get arguments"""
 
+    # noinspection PyTypeChecker
     parser = argparse.ArgumentParser(
         description='Create Python argparse program',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -52,7 +53,7 @@ def get_args() -> Args:
     parser.add_argument('-p',
                         '--purpose',
                         type=str,
-                        default=defaults.get('purpose', 'Rock the Casbah'),
+                        default=defaults.get('purpose', 'Do all the things'),
                         help='Purpose for docstring')
 
     parser.add_argument('-f',
@@ -72,7 +73,7 @@ def get_args() -> Args:
 
 # --------------------------------------------------
 def main() -> None:
-    """Make a jazz noise here"""
+    """This is where the magic happens"""
 
     args = get_args()
     program = args.program
