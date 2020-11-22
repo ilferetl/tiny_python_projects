@@ -147,7 +147,7 @@ def get_args():
 
 # --------------------------------------------------
 def main():
-    \"\"\"Make a jazz noise here\"\"\"
+    \"\"\"Actually do the things\"\"\"
 
     args = get_args()
     str_arg = args.arg
