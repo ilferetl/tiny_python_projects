@@ -43,7 +43,7 @@ def main():
 
     args = get_args()
     out_fh = open(args.outfile, 'wt') if args.outfile else sys.stdout
-    for line in args.text:
+    for line in args.text:      # write line by line to use less memory
         out_fh.write(line.upper())
     out_fh.close()
 
