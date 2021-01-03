@@ -19,7 +19,7 @@ def get_args():
 
     parser.add_argument('item',  # the positional parameter name
                         metavar='str',
-                        nargs='+',  # number of arguments where + means one or moer
+                        nargs='+',  # number of arguments where + means one or more
                         help='Item(s) to bring')
 
     parser.add_argument('-s',  # short flag name
